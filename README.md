@@ -12,8 +12,9 @@ Each shop has:
 - `shopId`, `shopName`, `shopOwner`
 - an inner `About` class containing: `city`, `address`, `email`
 
-Before inserting a shop, the program validates its email format using a `Predicate<String>` (`EmailFormatChecker`).  
+After inserting a shop, the program validates its email format using a `Predicate<String>` (`EmailFormatChecker`).  
 A local class `ShopNotifier` prints the validation result and confirmation message using **lambda expressions**.
+And provides worning that mail is not correct and to verify it manually later.
 
 ---
 
