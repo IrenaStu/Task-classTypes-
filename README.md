@@ -1,7 +1,13 @@
 #  Java Console Application — Shop Management (JDBC + Singleton + Lambdas)
 
-This project is a small **Java console application** that connects to a PostgreSQL database using **JDBC**.  
-It demonstrates advanced Java concepts including the **Singleton pattern**, **inner and local classes**, **lambdas**, and **functional interfaces** (`Predicate`, `Consumer`).
+This project is a **Java console application** that connects to a PostgreSQL database using **JDBC**.  
+It demonstrates advanced Java concepts such as:
+
+- **Singleton pattern** (`DbConnectionManager`)
+- **Inner and local classes**
+- **Anonymous classes**
+- **Lambdas and functional interfaces** (`Predicate`, `Consumer`)
+- **Generic Validator** interface extending `Predicate<T>`
 
 ---
 
@@ -26,6 +32,18 @@ And provides worning that mail is not correct and to verify it manually later.
 | **Lombok** | Reduces boilerplate | Generates getters, setters, constructors |
 | **JUnit 5** | Testing (optional) | Allows unit testing if needed |
 | **Java 21** | Language features | Supports lambdas, records, try-with-resources |
+
+## Java Imports Used
+
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+import lombok.RequiredArgsConstructor;
 
 ### `pom.xml` Dependencies
 ```xml
