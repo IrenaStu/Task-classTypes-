@@ -7,13 +7,13 @@ import lombok.Setter;
 @Setter
 
 public class Shop {
-    private String shopId;
+    private Integer shopId;
     private String shopName;
     private String shopOwner;
     About about ;
 
 
-    public Shop(String shopId, String shopName, String shopOwner, About about ) {
+    public Shop( Integer shopId, String shopName, String shopOwner, About about ) {
 
         this.shopId = shopId;
         this.shopName = shopName;

@@ -7,7 +7,7 @@ public class Main {
 
 
         Shop temp = new Shop(null, "name", "owner", null);
-        Shop.About about = temp.new About ("Tbilisi", "Nikoladze str", "nina.gmail");
+        Shop.About about = temp.new About ("Tbilisi", "Nikoladze str", "irena@.gmail");
 
         Shop shopToSet = new Shop(null, "SomeShop", "Irena Sturua", about);
 

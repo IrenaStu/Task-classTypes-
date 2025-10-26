@@ -5,7 +5,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.function.Predicate;
 import java.util.function.Consumer;
 
 @RequiredArgsConstructor
@@ -23,7 +22,7 @@ public class ShopService {
 // local class use
         class ShopNotifier {
             void notify(Shop s) {
-                Predicate<String> emailChecker = new EmailFormatChecker();
+                Validator<String> emailChecker = new EmailChaker();
                 String email = s.getAbout().getEmail();
                // lambdas  Used
                 Consumer<String> emailAction = emailChecker.test(email)
@@ -47,7 +46,7 @@ public class ShopService {
         ResultSet result = stm.executeQuery();
         while (result.next()) {
             int generatedId = result.getInt("shop_id");
-            shop.setShopId(String.valueOf(generatedId));
+            shop.setShopId(generatedId);
             new ShopNotifier().notify(shop);
         }
 
